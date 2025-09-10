@@ -11,7 +11,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0)
 
   const menuItems = [
-    { href: '#empresa', label: 'Empresa' },
+    { href: '#empresa', label: 'Empresas' },
     { href: '#servicos', label: 'Serviços' },
     { href: '#obras', label: 'Obras' },
     { href: '#seguranca', label: 'Segurança' },
