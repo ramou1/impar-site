@@ -139,7 +139,7 @@ export default function Home() {
               <div className="relative">
                 <div className="relative w-full h-[400px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/bg-hero.jpg" 
+                    src="/banner-hero.png" 
                     alt="Impar Climatização e Sistemas"
                     className="w-full h-full object-cover"
                   />
@@ -198,7 +198,7 @@ export default function Home() {
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <img 
-                    src="/sobre/visao.png" 
+                    src="/about/visao.png" 
                     alt="Visão"
                     className="w-16 h-16 object-contain"
                   />
@@ -213,7 +213,7 @@ export default function Home() {
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <img 
-                    src="/sobre/missao.png" 
+                    src="/about/missao.png" 
                     alt="Missão"
                     className="w-16 h-16 object-contain"
                   />
@@ -228,7 +228,7 @@ export default function Home() {
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
                   <img 
-                    src="/sobre/valores.png" 
+                    src="/about/valores.png" 
                     alt="Valores"
                     className="w-16 h-16 object-contain"
                   />
@@ -399,12 +399,9 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
-                  Título da Atuação 1
+                <h3 className="text-lg text-center font-medium text-gray-800 mb-2 leading-tight">
+                Painel de controle e automação para Central de água gelada 
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Descrição breve da primeira área de atuação que será preenchida posteriormente.
-                </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
@@ -415,12 +412,9 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
-                  Título da Atuação 2
+                <h3 className="text-lg text-center font-medium text-gray-800 mb-2 leading-tight">
+                Instalações de chiller com compressor parafuso. 
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Descrição breve da segunda área de atuação que será preenchida posteriormente.
-                </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
@@ -431,12 +425,9 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
-                  Título da Atuação 3
+                <h3 className="text-lg text-center font-medium text-gray-800 mb-2 leading-tight">
+                Instalações de centrais de água gelada, com sistemas de condensação a água
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Descrição breve da terceira área de atuação que será preenchida posteriormente.
-                </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
@@ -447,12 +438,9 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
-                  Título da Atuação 4
+                <h3 className="text-lg text-center font-medium text-gray-800 mb-2 leading-tight">
+                Instalação de chiller parafusos de alta eficiência. 
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Descrição breve da quarta área de atuação que será preenchida posteriormente.
-                </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
@@ -463,12 +451,9 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
-                  Título da Atuação 5
+                <h3 className="text-lg text-center font-medium text-gray-800 mb-2 leading-tight">
+                Sistemas de Automação Predial A automação predial traz inúmeros  benefícios que são essenciais para  um empreendimento moderno 
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Descrição breve da quinta área de atuação que será preenchida posteriormente.
-                </p>
               </div>
 
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
@@ -479,12 +464,9 @@ export default function Home() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
-                  Título da Atuação 6
+                <h3 className="text-lg text-center font-medium text-gray-800 mb-2 leading-tight">
+                Execução de sistemas de exaustão e ar externo 
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Descrição breve da sexta área de atuação que será preenchida posteriormente.
-                </p>
               </div>
             </div>
           </div>
@@ -557,11 +539,11 @@ export default function Home() {
                     <div className="space-y-2">
                       <div className="flex items-center justify-between">
                         <span className="text-white/90">Rogers Rogério Farias</span>
-                        <img src="/assinatura-rogers.png" alt="Assinatura Rogers" className="h-8 w-auto" />
+                        <img src="/assinatura-rogers.png" alt="Assinatura Rogers"/>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-white/90">Rafael Ramos</span>
-                        <img src="/assinatura-rafael.png" alt="Assinatura Rafael" className="h-8 w-auto" />
+                        <img src="/assinatura-rafael.png" alt="Assinatura Rafael" />
                       </div>
                     </div>
                   </div>
