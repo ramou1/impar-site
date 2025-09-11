@@ -12,7 +12,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
-import { MessageCircle } from 'lucide-react'
 
 export default function Home() {
   const services = [
@@ -66,7 +65,7 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         
         {/* Hero Section */}
-        <section id="inicio" className="relative min-h-[75vh] md:min-h-[75vh] flex items-center pt-16 bg-[url('/bg-hero.jpg')] bg-cover bg-center">
+        <section id="inicio" className="relative min-h-[75vh] md:min-h-[75vh] flex items-center pt-24 bg-[url('/bg-hero.jpg')] bg-cover bg-center">
           <div className="absolute inset-0 bg-black/50 backdrop-blur-xs" />
           <div className="container mx-auto px-4 relative">
             <div className="max-w-4xl mx-auto text-center text-white">
@@ -147,7 +146,7 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <Award className="w-16 h-16 text-navy mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Visão</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -156,7 +155,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <Users className="w-16 h-16 text-navy mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Missão</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -165,7 +164,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all">
+              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <Shield className="w-16 h-16 text-navy mx-auto mb-6" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Valores</h3>
                 <p className="text-gray-600 leading-relaxed">
@@ -200,7 +199,7 @@ export default function Home() {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100"
+                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-200"
                 >
                   <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
@@ -229,7 +228,7 @@ export default function Home() {
               {principais_obras.map((obra, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-100"
+                  className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <Building className="w-8 h-8 text-navy flex-shrink-0" />
@@ -312,8 +311,8 @@ export default function Home() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-3 gap-8 mb-12">
-                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg">
+              <div className="grid md:grid-cols-4 gap-8 mb-12">
+                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg border border-gray-200">
                   <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Phone className="w-8 h-8 text-navy" />
                   </div>
@@ -326,20 +325,8 @@ export default function Home() {
                   </a>
                 </div>
 
-                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg">
-                  <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Mail className="w-8 h-8 text-navy" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">E-mail</h3>
-                  <a 
-                    href="mailto:impar@imparsistemas.com" 
-                    className="text-navy hover:opacity-80 font-semibold transition-colors"
-                  >
-                    impar@imparsistemas.com
-                  </a>
-                </div>
 
-                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg">
+                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg border border-gray-200">
                   <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <MapPin className="w-8 h-8 text-navy" />
                   </div>
@@ -349,23 +336,42 @@ export default function Home() {
                     Barreiros, São José - SC
                   </p>
                 </div>
+
+                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Mail className="w-8 h-8 text-navy" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">E-mail</h3>
+                  <a 
+                    href="mailto:impar@imparsistemas.com" 
+                    className="text-navy hover:opacity-80 font-semibold transition-colors text-sm"
+                  >
+                    impar@imparsistemas.com
+                  </a>
+                </div>
               </div>
 
-              <div className="text-center bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl border border-gray-100">
+              <div className="text-center bg-[#d91e26] p-8 rounded-3xl text-white">
                 <div className="grid md:grid-cols-2 gap-6 text-left">
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-2">Informações da Empresa</h4>
-                    <p className="text-gray-600">
+                    <h4 className="font-bold text-white mb-2">Informações da Empresa</h4>
+                    <p className="text-white/90">
                       <strong>CNPJ:</strong> 19.043.304/0001-64<br />
                       <strong>Registro CREA-SC:</strong> 125.050-2
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-800 mb-2">Responsáveis Técnicos</h4>
-                    <p className="text-gray-600">
-                      Rogers Rogério Farias<br />
-                      Rafael Ramos
-                    </p>
+                    <h4 className="font-bold text-white mb-2">Responsáveis Técnicos</h4>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-white/90">Rogers Rogério Farias</span>
+                        <img src="/assinatura-rogers.png" alt="Assinatura Rogers" className="h-8 w-auto" />
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-white/90">Rafael Ramos</span>
+                        <img src="/assinatura-rafael.png" alt="Assinatura Rafael" className="h-8 w-auto" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -394,13 +400,15 @@ export default function Home() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/5547999999999"
+        href="https://wa.me/554830898300"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar no WhatsApp"
         className="fixed bottom-4 right-4 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 active:scale-95 transition"
       >
-        <MessageCircle className="w-7 h-7" />
+        <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
       </a>
     </>
   )
