@@ -49,17 +49,56 @@ export default function Home() {
 
   const principais_obras = [
     { nome: "Center Shopping", local: "Araranguá - SC", capacidade: "650 TR" },
+    { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR" },
     { nome: "Cestto Gravataí", local: "Gravataí - RS", capacidade: "400 TR" },
     { nome: "Hospital Regional Tereza Ramos", local: "Lages - SC", capacidade: "400 TR" },
-    { nome: "Porto Cali - Meia Praia", local: "Itapema - SC", capacidade: "409,25 TR" },
-    { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR" },
-    { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR" },
     { nome: "Outlet Japonês", local: "Sombrio - SC", capacidade: "300 TR" },
+    { nome: "Organização dos Advogados do Brasil", local: "Criciúma - SC", capacidade: "43 TR" },
+    { nome: "Paróquia São Donato", local: "Içara - SC", capacidade: "118,34 TR" },
+    { nome: "Hospital São Donato", local: "Içara - SC", capacidade: "94,75 TR" },
+    { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR" },
+    { nome: "SETRAM", local: "Tubarão - SC", capacidade: "41,6 TR" },
     { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR" },
-    { nome: "Shopping Center Norte", local: "Florianópolis - SC", capacidade: "520 TR" },
-    { nome: "Complexo Industrial ABC", local: "Joinville - SC", capacidade: "480 TR" },
-    { nome: "Torre Empresarial Sul", local: "Blumenau - SC", capacidade: "350 TR" },
-    { nome: "Centro de Convenções Leste", local: "Balneário Camboriú - SC", capacidade: "280 TR" }
+    { nome: "Porto Cali - Meia Praia", local: "Itapema - SC", capacidade: "409,25 TR" },
+  ]
+
+  const atuacoes = [
+    {
+      img: "/atuacoes/atuacao-1.jpg",
+      titulo: "Painel de controle e automação para Central de água gelada"
+    },
+    {
+      img: "/atuacoes/atuacao-2.jpg",
+      titulo: "Instalações de chiller com compressor parafuso"
+    },
+    {
+      img: "/atuacoes/atuacao-3.jpg",
+      titulo: "Instalações de centrais de água gelada, com sistemas de condensação a água"
+    },
+    {
+      img: "/atuacoes/atuacao-4.jpg",
+      titulo: "Instalação de chiller parafusos de alta eficiência"
+    },
+    {
+      img: "/atuacoes/atuacao-5.jpg",
+      titulo: "Sistemas de Automação Predial A automação predial traz inúmeros benefícios que são essenciais para um empreendimento moderno"
+    },
+    {
+      img: "/atuacoes/atuacao-6.jpg",
+      titulo: "Execução de sistemas de exaustão e ar externo"
+    },
+    {
+      img: "/atuacoes/atuacao-7.jpg",
+      titulo: "Instalação de sistemas tipo split, rooftop e self (ao lado imagem de uma instalação de splitão)."
+    },
+    {
+      img: "/atuacoes/atuacao-8.jpg",
+      titulo: "Serviços de funilaria em chapa de aço para solucionar as necessidades da instalação"
+    },
+    {
+      img: "/atuacoes/atuacao-9.jpg",
+      titulo: "Execução de sistemas de exaustão atendendo todas as normas vigentes. Execução de dutos soldados em aço carbono, à prova de explosão."
+    }
   ]
 
   return (
@@ -196,7 +235,7 @@ export default function Home() {
             
             <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
                   <img 
                     src="/about/visao.png" 
                     alt="Visão"
@@ -211,7 +250,7 @@ export default function Home() {
               </div>
 
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
                   <img 
                     src="/about/missao.png" 
                     alt="Missão"
@@ -226,7 +265,7 @@ export default function Home() {
               </div>
 
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
                   <img 
                     src="/about/valores.png" 
                     alt="Valores"
@@ -400,83 +439,20 @@ export default function Home() {
             </div>
 
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src="/atuacoes/atuacao-1.jpg" 
-                    alt="Atuação 1"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+              {atuacoes.map((atuacao, index) => (
+                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                  <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                    <img 
+                      src={atuacao.img} 
+                      alt={atuacao.titulo}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
+                    {atuacao.titulo}
+                  </h3>
                 </div>
-                <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                Painel de controle e automação para Central de água gelada 
-                </h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src="/atuacoes/atuacao-2.jpg" 
-                    alt="Atuação 2"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                Instalações de chiller com compressor parafuso. 
-                </h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src="/atuacoes/atuacao-3.jpg" 
-                    alt="Atuação 3"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                Instalações de centrais de água gelada, com sistemas de condensação a água
-                </h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src="/atuacoes/atuacao-4.jpg" 
-                    alt="Atuação 4"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                Instalação de chiller parafusos de alta eficiência. 
-                </h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src="/atuacoes/atuacao-5.jpg" 
-                    alt="Atuação 5"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                Sistemas de Automação Predial A automação predial traz inúmeros  benefícios que são essenciais para  um empreendimento moderno 
-                </h3>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
-                  <img 
-                    src="/atuacoes/atuacao-6.jpg" 
-                    alt="Atuação 6"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                Execução de sistemas de exaustão e ar externo 
-                </h3>
-              </div>
+              ))}
             </div>
           </div>
         </section>
