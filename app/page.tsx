@@ -48,18 +48,18 @@ export default function Home() {
   ]
 
   const principais_obras = [
-    { nome: "Center Shopping", local: "Araranguá - SC", capacidade: "650 TR" },
-    { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR" },
-    { nome: "Cestto Gravataí", local: "Gravataí - RS", capacidade: "400 TR" },
-    { nome: "Hospital Regional Tereza Ramos", local: "Lages - SC", capacidade: "400 TR" },
-    { nome: "Outlet Japonês", local: "Sombrio - SC", capacidade: "300 TR" },
-    { nome: "Organização dos Advogados do Brasil", local: "Criciúma - SC", capacidade: "43 TR" },
-    { nome: "Paróquia São Donato", local: "Içara - SC", capacidade: "118,34 TR" },
-    { nome: "Hospital São Donato", local: "Içara - SC", capacidade: "94,75 TR" },
-    { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR" },
-    { nome: "SETRAM", local: "Tubarão - SC", capacidade: "41,6 TR" },
-    { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR" },
-    { nome: "Porto Cali - Meia Praia", local: "Itapema - SC", capacidade: "409,25 TR" },
+    { nome: "Center Shopping", local: "Araranguá - SC", capacidade: "650 TR", img: "/obras/obra-1.jpg" },
+    { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR", img: "/obras/obra-2.jpg" },
+    { nome: "Cestto Gravataí", local: "Gravataí - RS", capacidade: "400 TR", img: "/obras/obra-3.jpg" },
+    { nome: "Hospital Regional Tereza Ramos", local: "Lages - SC", capacidade: "400 TR", img: "/obras/obra-4.jpg" },
+    { nome: "Outlet Japonês", local: "Sombrio - SC", capacidade: "300 TR", img: "/obras/obra-5.jpg" },
+    { nome: "Organização dos Advogados do Brasil", local: "Criciúma - SC", capacidade: "43 TR", img: "/obras/obra-6.jpg" },
+    { nome: "Paróquia São Donato", local: "Içara - SC", capacidade: "118,34 TR", img: "/obras/obra-7.jpg" },
+    { nome: "Hospital São Donato", local: "Içara - SC", capacidade: "94,75 TR", img: "/obras/obra-8.jpg" },
+    { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR", img: "/obras/obra-9.jpg" },
+    { nome: "SETRAM", local: "Tubarão - SC", capacidade: "41,6 TR", img: "/obras/obra-10.jpg" },
+    { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR", img: "/obras/obra-11.jpg" },
+    { nome: "Porto Cali - Meia Praia", local: "Itapema - SC", capacidade: "409,25 TR", img: "/obras/obra-12.jpg" },
   ]
 
   const atuacoes = [
@@ -409,7 +409,7 @@ export default function Home() {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <img 
-                      src={`/obras/obra-${index + 1}.jpg`} 
+                      src={obra.img} 
                       alt={obra.nome}
                       className="w-12 h-12 object-cover rounded-lg flex-shrink-0"
                     />
