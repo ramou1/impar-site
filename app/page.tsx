@@ -303,12 +303,12 @@ export default function Home() {
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">PCMSO</h3>
+                <h3 className="text-2xl font-bold">PCMSO</h3>
                 <p className="text-white/90 text-sm mb-4">
                   Programa de Controle Médico de Saúde Ocupacional segundo NR-7
                 </p>
                 <p className="text-white/80 text-xs leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Nossos funcionários são todos devidamente  registrados , o que permite a legalidade dos participantes na obra , evitando incômodos ao contratante . Em nosso quadro funcional , cerca de 70% dos profissionais possuem formação técnica na área que atuam , garantindo assim segurança e qualidade nos serviços. 
                 </p>
               </div>
 
@@ -316,12 +316,12 @@ export default function Home() {
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">PGR</h3>
+                <h3 className="text-2xl font-bold">PGR</h3>
                 <p className="text-white/90 text-sm mb-4">
                   Programa de Gerenciamento de Riscos segundo NR-9
                 </p>
                 <p className="text-white/80 text-xs leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Os funcionários trabalham com EPIs, uniformizados e identificados, possuem seguro de vida e de acidentes de trabalho. 
                 </p>
               </div>
 
@@ -329,12 +329,12 @@ export default function Home() {
                 <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Award className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">LTCAT</h3>
+                <h3 className="text-2xl font-bold">LTCAT</h3>
                 <p className="text-white/90 text-sm mb-4">
                   Laudo Técnico das Condições Ambientais de Trabalho
                 </p>
                 <p className="text-white/80 text-xs leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                A empresa possui os Programa de Saúde - PCMSO, segundo NR - 7, programa de treinamento - PGR, segundo NR - 9, LTCAT.NR - 9.
                 </p>
               </div>
             </div>
