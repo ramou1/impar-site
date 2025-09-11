@@ -55,7 +55,11 @@ export default function Home() {
     { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR" },
     { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR" },
     { nome: "Outlet Japonês", local: "Sombrio - SC", capacidade: "300 TR" },
-    { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR" }
+    { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR" },
+    { nome: "Shopping Center Norte", local: "Florianópolis - SC", capacidade: "520 TR" },
+    { nome: "Complexo Industrial ABC", local: "Joinville - SC", capacidade: "480 TR" },
+    { nome: "Torre Empresarial Sul", local: "Blumenau - SC", capacidade: "350 TR" },
+    { nome: "Centro de Convenções Leste", local: "Balneário Camboriú - SC", capacidade: "280 TR" }
   ]
 
   return (
@@ -65,37 +69,82 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         
         {/* Hero Section */}
-        <section id="inicio" className="relative min-h-[75vh] md:min-h-[75vh] flex items-center pt-24 bg-[url('/bg-hero.jpg')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-xs" />
-          <div className="container mx-auto px-4 relative">
-            <div className="max-w-4xl mx-auto text-center text-white">
-              <div className="mb-8">
-                <h1 className="text-5xl md:text-7xl font-bold mb-4">
-                  IMPAR
-                </h1>
-                <p className="text-2xl md:text-3xl opacity-90 mb-6">
-                  Climatização e Sistemas Ltda.
+        <section id="inicio" className="relative min-h-[80vh] flex items-center pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              {/* Conteúdo Textual - Lado Esquerdo */}
+              <div className="space-y-8 pt-8">
+                {/* Tagline */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full border border-blue-100">
+                  <div className="w-2 h-2 bg-navy rounded-full"></div>
+                  <span className="text-sm font-medium text-gray-700">Soluções em Climatização</span>
+                </div>
+
+                {/* Título Principal */}
+                <div className="space-y-4">
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+                    IMPAR
+                  </h1>
+                  <p className="text-2xl md:text-3xl text-gray-700 font-medium">
+                    Climatização e Sistemas Ltda.
+                  </p>
+                </div>
+                
+                {/* Descrição */}
+                <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                  Desenvolvimento de projetos de climatização, ventilação e exaustão com 
+                  <strong className="text-navy"> excelência e qualidade</strong>
                 </p>
+                
+                {/* Botões de Ação */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a 
+                    href="#servicos"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-navy text-white font-semibold rounded-xl hover:bg-navy/90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 group"
+                  >
+                    Nossos Serviços
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                  <a 
+                    href="#contato"
+                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-all transform hover:scale-105 bg-white/80 backdrop-blur-sm group"
+                  >
+                    Entre em Contato
+                    <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </a>
+                </div>
+
+                {/* Estatísticas */}
+                <div className="grid grid-cols-3 gap-8 pt-8 border-t border-gray-200">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-navy">15+</div>
+                    <div className="text-sm text-gray-600">Anos de Experiência</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-navy">500+</div>
+                    <div className="text-sm text-gray-600">Projetos Executados</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-navy">100%</div>
+                    <div className="text-sm text-gray-600">Satisfação</div>
+                  </div>
+                </div>
               </div>
-              
-              <p className="text-xl mb-12 max-w-3xl mx-auto leading-relaxed opacity-95">
-                Desenvolvimento de projetos de climatização, ventilação e exaustão com 
-                <strong className="text-navy"> excelência e qualidade</strong>
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                <a 
-                  href="#servicos"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-navy text-white font-semibold rounded-lg hover:brightness-90 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
-                >
-                  Nossos Serviços
-                </a>
-                <a 
-                  href="#contato"
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-navy text-navy font-semibold rounded-lg hover:bg-navy hover:text-white transition-all transform hover:scale-105 bg-white/0"
-                >
-                  Entre em Contato
-                </a>
+
+              {/* Imagem - Lado Direito */}
+              <div className="relative">
+                <div className="relative w-full h-[400px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="/bg-hero.jpg" 
+                    alt="Impar Climatização e Sistemas"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -128,7 +177,7 @@ export default function Home() {
         </section>
 
         {/* Sobre a Empresa */}
-        <section id="empresa" className="py-20 bg-white">
+        <section id="sobre" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -147,7 +196,13 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <Award className="w-16 h-16 text-navy mx-auto mb-6" />
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src="/sobre/visao.png" 
+                    alt="Visão"
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Visão</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Ser uma empresa de referência pela qualidade dos serviços executados em sistemas de climatização, 
@@ -156,7 +211,13 @@ export default function Home() {
               </div>
 
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <Users className="w-16 h-16 text-navy mx-auto mb-6" />
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src="/sobre/missao.png" 
+                    alt="Missão"
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Missão</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Desenvolvimento de soluções para nossos clientes, buscando excelência em serviços voltados 
@@ -165,7 +226,13 @@ export default function Home() {
               </div>
 
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <Shield className="w-16 h-16 text-navy mx-auto mb-6" />
+                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
+                  <img 
+                    src="/sobre/valores.png" 
+                    alt="Valores"
+                    className="w-16 h-16 object-contain"
+                  />
+                </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">Valores</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Compromisso com clientes, respeito ao ser humano, ética e excelência nos serviços, 
@@ -212,8 +279,70 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Segurança */}
+        <section id="seguranca" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                Segurança para <span className="text-navy">sua Obra</span>
+              </h2>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  Nossos funcionários são todos devidamente registrados, garantindo legalidade dos participantes 
+                  na obra e evitando incômodos ao contratante.
+                </p>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Os funcionários trabalham com EPIs, uniformizados e identificados, possuem seguro de vida 
+                  e de acidentes de trabalho.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="bg-[#d91e26] p-8 rounded-xl text-white text-center">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">PCMSO</h3>
+                <p className="text-white/90 text-sm mb-4">
+                  Programa de Controle Médico de Saúde Ocupacional segundo NR-7
+                </p>
+                <p className="text-white/80 text-xs leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+
+              <div className="bg-[#d91e26] p-8 rounded-xl text-white text-center">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">PGR</h3>
+                <p className="text-white/90 text-sm mb-4">
+                  Programa de Gerenciamento de Riscos segundo NR-9
+                </p>
+                <p className="text-white/80 text-xs leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+
+              <div className="bg-[#d91e26] p-8 rounded-xl text-white text-center">
+                <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">LTCAT</h3>
+                <p className="text-white/90 text-sm mb-4">
+                  Laudo Técnico das Condições Ambientais de Trabalho
+                </p>
+                <p className="text-white/80 text-xs leading-relaxed">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Principais Obras */}
-        <section id="obras" className="py-20 bg-white">
+        <section id="obras" className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -228,10 +357,14 @@ export default function Home() {
               {principais_obras.map((obra, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200"
+                  className="bg-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200"
                 >
                   <div className="flex items-start justify-between mb-4">
-                    <Building className="w-8 h-8 text-navy flex-shrink-0" />
+                    <img 
+                      src={`/obras/obra-${index + 1}.jpg`} 
+                      alt={obra.nome}
+                      className="w-12 h-12 object-cover rounded-lg flex-shrink-0"
+                    />
                     <span className="text-2xl font-bold text-primary-red ml-2">{obra.capacidade}</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2 leading-tight">{obra.nome}</h3>
@@ -245,53 +378,112 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Segurança */}
-        <section id="seguranca" className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        {/* Atuações */}
+        <section id="atuacoes" className="py-20 bg-gradient-to-br from-gray-100 to-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Segurança para <span className="text-blue-400">sua Obra</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                Nossas <span className="text-navy">Atuações</span>
               </h2>
-              <div className="max-w-4xl mx-auto">
-                <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                  Nossos funcionários são todos devidamente registrados, garantindo legalidade dos participantes 
-                  na obra e evitando incômodos ao contratante.
-                </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Os funcionários trabalham com EPIs, uniformizados e identificados, possuem seguro de vida 
-                  e de acidentes de trabalho.
-                </p>
-              </div>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Conheça as principais áreas onde atuamos com excelência e expertise técnica
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-8 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-                <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-10 h-10 text-white" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/atuacoes/atuacao-1.jpg" 
+                    alt="Atuação 1"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">PCMSO</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Programa de Controle Médico de Saúde Ocupacional segundo NR-7
+                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                  Título da Atuação 1
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Descrição breve da primeira área de atuação que será preenchida posteriormente.
                 </p>
               </div>
 
-              <div className="text-center p-8 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-                <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-10 h-10 text-white" />
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/atuacoes/atuacao-2.jpg" 
+                    alt="Atuação 2"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">PGR</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Programa de Gerenciamento de Riscos segundo NR-9
+                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                  Título da Atuação 2
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Descrição breve da segunda área de atuação que será preenchida posteriormente.
                 </p>
               </div>
 
-              <div className="text-center p-8 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
-                <div className="w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-10 h-10 text-white" />
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/atuacoes/atuacao-3.jpg" 
+                    alt="Atuação 3"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">LTCAT</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Laudo Técnico das Condições Ambientais de Trabalho
+                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                  Título da Atuação 3
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Descrição breve da terceira área de atuação que será preenchida posteriormente.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/atuacoes/atuacao-4.jpg" 
+                    alt="Atuação 4"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                  Título da Atuação 4
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Descrição breve da quarta área de atuação que será preenchida posteriormente.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/atuacoes/atuacao-5.jpg" 
+                    alt="Atuação 5"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                  Título da Atuação 5
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Descrição breve da quinta área de atuação que será preenchida posteriormente.
+                </p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <img 
+                    src="/atuacoes/atuacao-6.jpg" 
+                    alt="Atuação 6"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-2 leading-tight">
+                  Título da Atuação 6
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Descrição breve da sexta área de atuação que será preenchida posteriormente.
                 </p>
               </div>
             </div>
@@ -311,7 +503,7 @@ export default function Home() {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-4 gap-8 mb-12">
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
                 <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg border border-gray-200">
                   <div className="w-16 h-16 bg-navy/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Phone className="w-8 h-8 text-navy" />
