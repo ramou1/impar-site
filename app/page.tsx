@@ -48,55 +48,55 @@ export default function Home() {
   ]
 
   const principais_obras = [
-    { nome: "Center Shopping", local: "Araranguá - SC", capacidade: "650 TR", img: "/obras/obra-1.jpg" },
-    { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR", img: "/obras/obra-2.jpg" },
-    { nome: "Cestto Gravataí", local: "Gravataí - RS", capacidade: "400 TR", img: "/obras/obra-3.jpg" },
-    { nome: "Hospital Regional Tereza Ramos", local: "Lages - SC", capacidade: "400 TR", img: "/obras/obra-4.jpg" },
-    { nome: "Outlet Japonês", local: "Sombrio - SC", capacidade: "300 TR", img: "/obras/obra-5.jpg" },
-    { nome: "Organização dos Advogados do Brasil", local: "Criciúma - SC", capacidade: "43 TR", img: "/obras/obra-6.jpg" },
-    { nome: "Paróquia São Donato", local: "Içara - SC", capacidade: "118,34 TR", img: "/obras/obra-7.jpg" },
-    { nome: "Hospital São Donato", local: "Içara - SC", capacidade: "94,75 TR", img: "/obras/obra-8.jpg" },
-    { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR", img: "/obras/obra-9.jpg" },
-    { nome: "SETRAM", local: "Tubarão - SC", capacidade: "41,6 TR", img: "/obras/obra-10.jpg" },
-    { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR", img: "/obras/obra-11.jpg" },
-    { nome: "Porto Cali - Meia Praia", local: "Itapema - SC", capacidade: "409,25 TR", img: "/obras/obra-12.jpg" },
+    { nome: "Center Shopping", local: "Araranguá - SC", capacidade: "650 TR", img: "/obras/obra-1.png" },
+    { nome: "Cestto Wenceslau", local: "Porto Alegre - RS", capacidade: "326 TR", img: "/obras/obra-2.png" },
+    { nome: "Cestto Gravataí", local: "Gravataí - RS", capacidade: "400 TR", img: "/obras/obra-3.png" },
+    { nome: "Hospital Regional Tereza Ramos", local: "Lages - SC", capacidade: "400 TR", img: "/obras/obra-4.png" },
+    { nome: "Outlet Japonês", local: "Sombrio - SC", capacidade: "300 TR", img: "/obras/obra-5.png" },
+    { nome: "Organização dos Advogados do Brasil", local: "Criciúma - SC", capacidade: "43 TR", img: "/obras/obra-6.png" },
+    { nome: "Paróquia São Donato", local: "Içara - SC", capacidade: "118,34 TR", img: "/obras/obra-7.png" },
+    { nome: "Hospital São Donato", local: "Içara - SC", capacidade: "94,75 TR", img: "/obras/obra-8.png" },
+    { nome: "AM - Master Hall", local: "Criciúma - SC", capacidade: "380 TR", img: "/obras/obra-9.png" },
+    { nome: "SETRAM", local: "Tubarão - SC", capacidade: "41,6 TR", img: "/obras/obra-10.png" },
+    { nome: "Promotoria da Justiça", local: "Lages - SC", capacidade: "196,25 TR", img: "/obras/obra-11.png" },
+    { nome: "Porto Cali - Meia Praia", local: "Itapema - SC", capacidade: "409,25 TR", img: "/obras/obra-12.png" },
   ]
 
   const atuacoes = [
     {
-      img: "/atuacoes/atuacao-1.jpg",
+      img: "/atuacoes/atuacao-1.png",
       titulo: "Painel de controle e automação para Central de água gelada"
     },
     {
-      img: "/atuacoes/atuacao-2.jpg",
+      img: "/atuacoes/atuacao-2.png",
       titulo: "Instalações de chiller com compressor parafuso"
     },
     {
-      img: "/atuacoes/atuacao-3.jpg",
+      img: "/atuacoes/atuacao-3.png",
       titulo: "Instalações de centrais de água gelada, com sistemas de condensação a água"
     },
     {
-      img: "/atuacoes/atuacao-4.jpg",
+      img: "/atuacoes/atuacao-4.png",
       titulo: "Instalação de chiller parafusos de alta eficiência"
     },
     {
-      img: "/atuacoes/atuacao-5.jpg",
+      img: "/atuacoes/atuacao-5.png",
       titulo: "Sistemas de Automação Predial A automação predial traz inúmeros benefícios que são essenciais para um empreendimento moderno"
     },
     {
-      img: "/atuacoes/atuacao-6.jpg",
+      img: "/atuacoes/atuacao-6.png",
       titulo: "Execução de sistemas de exaustão e ar externo"
     },
     {
-      img: "/atuacoes/atuacao-7.jpg",
+      img: "/atuacoes/atuacao-7.png",
       titulo: "Instalação de sistemas tipo split, rooftop e self (ao lado imagem de uma instalação de splitão)."
     },
     {
-      img: "/atuacoes/atuacao-8.jpg",
+      img: "/atuacoes/atuacao-8.png",
       titulo: "Serviços de funilaria em chapa de aço para solucionar as necessidades da instalação"
     },
     {
-      img: "/atuacoes/atuacao-9.jpg",
+      img: "/atuacoes/atuacao-9.png",
       titulo: "Execução de sistemas de exaustão atendendo todas as normas vigentes. Execução de dutos soldados em aço carbono, à prova de explosão."
     }
   ]
@@ -237,7 +237,7 @@ export default function Home() {
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
                   <img 
-                    src="/about/visao.png" 
+                    src="/sobre/visao.png" 
                     alt="Visão"
                     className="w-16 h-16 object-contain"
                   />
@@ -252,7 +252,7 @@ export default function Home() {
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
                   <img 
-                    src="/about/missao.png" 
+                    src="/sobre/missao.png" 
                     alt="Missão"
                     className="w-16 h-16 object-contain"
                   />
@@ -267,7 +267,7 @@ export default function Home() {
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
                   <img 
-                    src="/about/valores.png" 
+                    src="/sobre/valores.png" 
                     alt="Valores"
                     className="w-16 h-16 object-contain"
                   />
@@ -411,7 +411,7 @@ export default function Home() {
                     <img 
                       src={obra.img} 
                       alt={obra.nome}
-                      className="w-12 h-12 object-cover rounded-lg flex-shrink-0"
+                      className="w-24 h-12 object-cover rounded-lg flex-shrink-0"
                     />
                     <span className="text-2xl font-bold text-brand-red ml-2">{obra.capacidade}</span>
                   </div>
@@ -441,7 +441,7 @@ export default function Home() {
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {atuacoes.map((atuacao, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
-                  <div className="w-full h-48 mb-4 rounded-lg overflow-hidden">
+                  <div className="w-48 h-48 mb-4 rounded-lg overflow-hidden mx-auto">
                     <img 
                       src={atuacao.img} 
                       alt={atuacao.titulo}
