@@ -548,7 +548,7 @@ export default function Home() {
                     <img
                       src={obra.img}
                       alt={obra.nome}
-                      className="w-24 h-12 object-cover rounded-lg flex-shrink-0"
+                      className="w-32 h-16 object-cover rounded-lg flex-shrink-0"
                     />
                     <span className="text-2xl font-bold text-brand-red ml-2">
                       {obra.capacidade}
@@ -616,7 +616,7 @@ export default function Home() {
                 Atuações / <span className="text-white">Operações</span> / Projetos
               </h2>
             </div>
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
               <div className="bg-brand-blue border border-brand-blue rounded-xl p-1 shadow-lg">
                 <img
                   src="/mapa.png"
