@@ -16,6 +16,7 @@ export default function Header() {
     { href: '#seguranca', label: 'Segurança' },
     { href: '#obras', label: 'Obras' },
     { href: '#atuacoes', label: 'Atuações' },
+    { href: '#operacoes', label: 'Operações' },
     { href: '#contato', label: 'Contato' },
   ]
 

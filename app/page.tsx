@@ -302,7 +302,7 @@ export default function Home() {
         <section className="py-6 md:py-10 bg-gray-200">
           <div className="container mx-auto px-4">
             <div className="relative overflow-hidden">
-              <div className="flex gap-12 animate-[scroll_12s_linear_infinite] md:animate-[scroll_16s_linear_infinite] will-change-transform">
+              <div className="flex gap-12 animate-[scroll_8s_linear_infinite] md:animate-[scroll_16s_linear_infinite] will-change-transform">
                 {[...Array(8)].map((_, i) => (
                   <img
                     key={i}
