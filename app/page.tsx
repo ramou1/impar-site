@@ -182,9 +182,9 @@ export default function Home() {
           className="relative min-h-[70vh] flex items-center pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white"
         >
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               {/* Conteúdo Textual - Lado Esquerdo */}
-              <div className="space-y-8 pt-8">
+              <div className="space-y-8 pt-8 order-2 lg:order-1">
                 {/* Tagline */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full border border-blue-100">
                   <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
@@ -284,8 +284,8 @@ export default function Home() {
               </div>
 
               {/* Imagem - Lado Direito */}
-              <div className="relative">
-                <div className="relative w-full h-[400px] lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative order-1 lg:order-2">
+                <div className="relative w-full h-48 md:h-56 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src="/banner-hero.png"
                     alt="Impar Climatização e Sistemas"
