@@ -531,7 +531,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Principais <span className="text-brand-blue">Obras</span>
+                Nossas <span className="text-brand-blue">Obras</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Conheça alguns de nossos projetos de maior destaque executados
