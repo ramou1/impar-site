@@ -179,7 +179,7 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="inicio"
-          className="relative min-h-[80vh] flex items-center pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white"
+          className="relative min-h-[70vh] flex items-center pt-24 pb-16 bg-gradient-to-br from-blue-50 to-white"
         >
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -194,23 +194,24 @@ export default function Home() {
                 </div>
 
                 {/* Título Principal */}
-                <div className="space-y-4">
+                {/* <div className="space-y-4">
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
                     IMPAR
                   </h1>
                   <p className="text-2xl md:text-3xl text-gray-700 font-medium">
                     Climatização e Sistemas Ltda.
                   </p>
-                </div>
+                </div> */}
 
                 {/* Descrição */}
-                <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
+                {/* <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
                   Desenvolvimento de projetos de climatização, ventilação e
-                  exaustão com
-                  <strong className="text-brand-blue">
-                    {" "}
-                    excelência e qualidade
-                  </strong>
+                  exaustão com <strong className="text-brand-blue"> excelência e qualidade.</strong>
+                </p> */}
+
+                <p className="text-2xl text-gray-600 leading-relaxed max-w-lg">
+                  Desenvolvimento de projetos de climatização, ventilação e
+                  exaustão com <strong className="text-brand-blue"> excelência e qualidade.</strong>
                 </p>
 
                 {/* Botões de Ação */}
