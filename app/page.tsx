@@ -14,6 +14,7 @@ import {
   MapPin,
 } from "lucide-react";
 import ObrasGrid from "../components/ObrasGrid";
+import BrandsCarousel from "../components/BrandsCarousel";
 
 export default function Home() {
   const services = [
@@ -303,26 +304,7 @@ export default function Home() {
         {/* Marcas - Carrossel */}
         <section className="py-6 md:py-10 bg-gray-200">
           <div className="container mx-auto px-4">
-            <div className="relative overflow-hidden">
-              <div className="flex gap-12 animate-[scroll_8s_linear_infinite] md:animate-[scroll_16s_linear_infinite] will-change-transform">
-                {[...Array(8)].map((_, i) => (
-                  <img
-                    key={i}
-                    src={`/brands/logo0${i + 1}.png`}
-                    alt={`Logo ${i + 1}`}
-                    className="shrink-0 h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                ))}
-                {[...Array(8)].map((_, i) => (
-                  <img
-                    key={`dup-${i}`}
-                    src={`/brands/logo0${i + 1}.png`}
-                    alt={`Logo ${i + 1}`}
-                    className="shrink-0 h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                ))}
-              </div>
-            </div>
+            <BrandsCarousel />
           </div>
         </section>
 
