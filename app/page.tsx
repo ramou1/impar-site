@@ -187,7 +187,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
               {/* Conteúdo Textual - Lado Esquerdo */}
-              <div className="space-y-8 pt-8 order-2 lg:order-1">
+              <div className="space-y-8 pt-6 order-2 lg:order-1">
                 {/* Tagline */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 rounded-full border border-blue-100">
                   <div className="w-2 h-2 bg-brand-blue rounded-full"></div>
