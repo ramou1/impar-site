@@ -290,7 +290,7 @@ export default function Home() {
               <div className="relative order-1 lg:order-2">
                 <div className="relative w-full h-48 md:h-56 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="/banner-hero.png"
+                    src="/banner-hero.jpg"
                     alt="Impar Climatização e Sistemas"
                     className="w-full h-full object-cover"
                   />
