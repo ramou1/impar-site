@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import ZoomableImage from "../components/ZoomableImage";
 import {
   Snowflake,
   Wind,
@@ -606,7 +607,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Atuações/Operações/Projetos */}
+        {/* Operações/Projetos */}
         <section id="operacoes" className="py-20 bg-brand-blue">
           <div className="container mx-auto px-4">
             <div className="text-center mb-10">
@@ -614,12 +615,12 @@ export default function Home() {
                 Atuações / <span className="text-brand-blue">Operações</span> / Projetos
               </h2> */}
               <h2 className="text-4xl md:text-5xl font-bold text-gray-300 mb-6">
-                Atuações / <span className="text-white">Operações</span> / Projetos
+                Operações / <span className="text-white">Projetos</span>
               </h2>
             </div>
             <div className="max-w-7xl mx-auto">
               <div className="bg-brand-blue border border-brand-blue rounded-xl p-1 shadow-lg">
-                <img
+                <ZoomableImage
                   src="/mapa.png"
                   alt="Mapa de atuações, operações e projetos"
                   className="w-full h-auto rounded-lg object-cover"
