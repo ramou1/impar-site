@@ -13,6 +13,7 @@ import {
   Mail,
   MapPin,
 } from "lucide-react";
+import ObrasGrid from "../components/ObrasGrid";
 
 export default function Home() {
   const services = [
@@ -540,32 +541,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {principais_obras.map((obra, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200"
-                >
-                  <div className="flex items-start justify-between mb-4">
-                    <img
-                      src={obra.img}
-                      alt={obra.nome}
-                      className="w-32 h-16 object-cover rounded-lg flex-shrink-0"
-                    />
-                    <span className="text-2xl font-bold text-brand-red ml-2">
-                      {obra.capacidade}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 leading-tight">
-                    {obra.nome}
-                  </h3>
-                  <p className="text-gray-600 flex items-center text-sm">
-                    <MapPin className="w-4 h-4 mr-1 flex-shrink-0" />
-                    {obra.local}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <ObrasGrid items={principais_obras} />
           </div>
         </section>
 
