@@ -14,11 +14,10 @@ const DEFAULT_IMAGES = Array.from({ length: 8 }, (_, i) => `/brands/logo0${i + 1
 export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarouselProps) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
 
-  // Velocidade 1500ms mobile e 2500ms desktop
+  // Movimento contínuo mais dinâmico
   const autoplay = useMemo(() => {
-    // Embla Autoplay uses delay between scroll snaps; we simulate continuous by small snaps
-    const delay = typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches ? 2500 : 1500;
-    return Autoplay({ delay, stopOnInteraction: false, stopOnMouseEnter: true });
+    const delay = typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches ? 1000 : 800;
+    return Autoplay({ delay, stopOnInteraction: false, stopOnMouseEnter: false });
   }, []);
 
   const options: EmblaOptionsType = {
@@ -27,6 +26,7 @@ export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarous
     align: "start",
     containScroll: "trimSnaps",
     slidesToScroll: 1,
+    skipSnaps: false,
   };
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay]);
@@ -41,7 +41,7 @@ export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarous
   const onMouseLeave = useCallback(() => autoplay.play(), [autoplay]);
 
   return (
-    <div className="relative" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+    <div className="relative">
       <div className="overflow-hidden" ref={(node) => { viewportRef.current = node; emblaRef(node); }}>
         <div className="flex">
           {images.concat(images).map((src, idx) => (

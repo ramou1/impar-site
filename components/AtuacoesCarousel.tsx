@@ -19,7 +19,7 @@ export default function AtuacoesCarousel({ items }: AtuacoesCarouselProps) {
 
   const options: EmblaOptionsType = {
     loop: true,
-    align: "start",
+    align: "center",
     containScroll: "trimSnaps",
     slidesToScroll: 1,
   };
@@ -51,7 +51,7 @@ export default function AtuacoesCarousel({ items }: AtuacoesCarouselProps) {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
           {items.map((atuacao, index) => (
-            <div key={index} className="shrink-0 w-[85%] px-2 h-[360px]">
+            <div key={index} className="shrink-0 w-[90%] px-2 h-[360px]">
               <div className="bg-white h-full flex flex-col p-6 rounded-xl shadow-lg border border-gray-200">
                 <div className="w-full h-48 mb-4 rounded-lg overflow-hidden flex items-center justify-center">
                   <img src={atuacao.img} alt={atuacao.titulo} className="max-w-full max-h-full object-contain" />
