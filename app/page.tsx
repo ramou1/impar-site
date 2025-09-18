@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import ObrasGrid from "../components/ObrasGrid";
 import BrandsCarousel from "../components/BrandsCarousel";
+import AtuacoesCarousel from "../components/AtuacoesCarousel";
 
 export default function Home() {
   const services = [
@@ -543,24 +544,30 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {atuacoes.map((atuacao, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
-                >
-                  <div className="w-48 h-48 mb-4 rounded-lg overflow-hidden mx-auto">
-                    <img
-                      src={atuacao.img}
-                      alt={atuacao.titulo}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
+            {/* Mobile: Carrossel; Desktop: Grid */}
+            <div className="max-w-6xl mx-auto">
+              <div className="md:hidden">
+                <AtuacoesCarousel items={atuacoes} />
+              </div>
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {atuacoes.map((atuacao, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
+                  >
+                    <div className="w-48 h-48 mb-4 rounded-lg overflow-hidden mx-auto">
+                      <img
+                        src={atuacao.img}
+                        alt={atuacao.titulo}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
+                      {atuacao.titulo}
+                    </h3>
                   </div>
-                  <h3 className="text-base text-center font-medium text-gray-800 mb-2 leading-tight">
-                    {atuacao.titulo}
-                  </h3>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>
