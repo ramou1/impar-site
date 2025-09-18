@@ -32,12 +32,6 @@ export default function Home() {
         "Desenvolvimento de projetos completos de ventilação e sistemas de exaustão",
     },
     {
-      icon: <Wrench className="w-12 h-12 text-brand-blue" />,
-      title: "Manutenção",
-      description:
-        "Manutenções preventivas e corretivas em sistemas de médio e grande porte",
-    },
-    {
       icon: <Building className="w-12 h-12 text-brand-blue" />,
       title: "Projetos",
       description:
@@ -48,11 +42,6 @@ export default function Home() {
       title: "Automação",
       description:
         "Projetos elétricos de controle e automação para ar condicionado e iluminação",
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-brand-blue" />,
-      title: "Consultoria",
-      description: "Vistorias técnicas, consultorias e elaboração de PMOC",
     },
   ];
 
@@ -409,7 +398,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
