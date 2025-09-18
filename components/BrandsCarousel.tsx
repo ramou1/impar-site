@@ -14,9 +14,8 @@ const DEFAULT_IMAGES = Array.from({ length: 8 }, (_, i) => `/brands/logo0${i + 1
 export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarouselProps) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
 
-  // Movimento contínuo mais dinâmico
   const autoplay = useMemo(() => {
-    const delay = typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches ? 1000 : 800;
+    const delay = typeof window !== "undefined" && window.matchMedia("(min-width: 768px)").matches ? 1500 : 1000;
     return Autoplay({ delay, stopOnInteraction: false, stopOnMouseEnter: false });
   }, []);
 
