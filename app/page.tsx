@@ -398,11 +398,11 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-200"
+                  className="bg-white p-4 lg:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-200"
                 >
                   <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
