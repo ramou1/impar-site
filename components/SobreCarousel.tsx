@@ -5,17 +5,18 @@ import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-type AtuacaoItem = {
+type SobreItem = {
   img: string;
   titulo: string;
+  descricao: string;
 };
 
-type AtuacoesCarouselProps = {
-  items: AtuacaoItem[];
+type SobreCarouselProps = {
+  items: SobreItem[];
 };
 
-export default function AtuacoesCarousel({ items }: AtuacoesCarouselProps) {
-  const autoplay = useMemo(() => Autoplay({ delay: 3500, stopOnInteraction: false, stopOnMouseEnter: true }), []);
+export default function SobreCarousel({ items }: SobreCarouselProps) {
+  const autoplay = useMemo(() => Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: true }), []);
 
   const options: EmblaOptionsType = {
     loop: true,
@@ -50,17 +51,18 @@ export default function AtuacoesCarousel({ items }: AtuacoesCarouselProps) {
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex pb-6">
-          {items.map((atuacao, index) => (
-            <div key={index} className="shrink-0 w-[90%] px-2 h-[360px]">
-              <div className="bg-white h-full flex flex-col p-6 rounded-xl shadow-lg border border-gray-200">
-                <div className="w-full h-48 mb-4 rounded-lg overflow-hidden flex items-center justify-center">
-                  <img src={atuacao.img} alt={atuacao.titulo} className="max-w-full max-h-full object-contain" />
+          {items.map((item, index) => (
+            <div key={index} className="shrink-0 w-[90%] px-2">
+              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200 h-full">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
+                  <img
+                    src={item.img}
+                    alt={item.titulo}
+                    className="w-16 h-16 object-contain"
+                  />
                 </div>
-                <div className="mt-auto">
-                  <h3 className="text-base text-center font-medium text-gray-800 leading-tight min-h-[48px]">
-                    {atuacao.titulo}
-                  </h3>
-                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">{item.titulo}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.descricao}</p>
               </div>
             </div>
           ))}
@@ -98,5 +100,3 @@ export default function AtuacoesCarousel({ items }: AtuacoesCarouselProps) {
     </div>
   );
 }
-
-

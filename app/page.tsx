@@ -16,6 +16,7 @@ import {
 import ObrasGrid from "../components/ObrasGrid";
 import BrandsCarousel from "../components/BrandsCarousel";
 import AtuacoesCarousel from "../components/AtuacoesCarousel";
+import SobreCarousel from "../components/SobreCarousel";
 
 export default function Home() {
   const services = [
@@ -161,6 +162,24 @@ export default function Home() {
       img: "/atuacoes/atuacao-9.png",
       titulo:
         "Execução de sistemas de exaustão atendendo todas as normas vigentes. Execução de dutos soldados em aço carbono, à prova de explosão.",
+    },
+  ];
+
+  const sobre_items = [
+    {
+      img: "/sobre/visao.png",
+      titulo: "Visão",
+      descricao: "Ser uma empresa de referência pela qualidade dos serviços executados em sistemas de climatização, reconhecidos pela sociedade, clientes, colaboradores, fornecedores e parceiros.",
+    },
+    {
+      img: "/sobre/missao.png",
+      titulo: "Missão",
+      descricao: "Desenvolvimento de soluções para nossos clientes, buscando excelência em serviços voltados na área de climatização, ventilação e exaustão.",
+    },
+    {
+      img: "/sobre/valores.png",
+      titulo: "Valores",
+      descricao: "Compromisso com clientes, respeito ao ser humano, ética e excelência nos serviços, mantendo como cultura dentro da empresa.",
     },
   ];
 
@@ -319,57 +338,63 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                  <img
-                    src="/sobre/visao.png"
-                    alt="Visão"
-                    className="w-16 h-16 object-contain"
-                  />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">Visão</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Ser uma empresa de referência pela qualidade dos serviços
-                  executados em sistemas de climatização, reconhecidos pela
-                  sociedade, clientes, colaboradores, fornecedores e parceiros.
-                </p>
+            {/* Mobile: Carrossel; Desktop: Grid */}
+            <div className="max-w-5xl mx-auto">
+              <div className="md:hidden">
+                <SobreCarousel items={sobre_items} />
               </div>
-
-              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                  <img
-                    src="/sobre/missao.png"
-                    alt="Missão"
-                    className="w-16 h-16 object-contain"
-                  />
+              <div className="hidden md:grid md:grid-cols-3 gap-8">
+                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
+                  <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
+                    <img
+                      src="/sobre/visao.png"
+                      alt="Visão"
+                      className="w-16 h-16 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">Visão</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Ser uma empresa de referência pela qualidade dos serviços
+                    executados em sistemas de climatização, reconhecidos pela
+                    sociedade, clientes, colaboradores, fornecedores e parceiros.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  Missão
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Desenvolvimento de soluções para nossos clientes, buscando
-                  excelência em serviços voltados na área de climatização,
-                  ventilação e exaustão.
-                </p>
-              </div>
 
-              <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                  <img
-                    src="/sobre/valores.png"
-                    alt="Valores"
-                    className="w-16 h-16 object-contain"
-                  />
+                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
+                  <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
+                    <img
+                      src="/sobre/missao.png"
+                      alt="Missão"
+                      className="w-16 h-16 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    Missão
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Desenvolvimento de soluções para nossos clientes, buscando
+                    excelência em serviços voltados na área de climatização,
+                    ventilação e exaustão.
+                  </p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  Valores
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Compromisso com clientes, respeito ao ser humano, ética e
-                  excelência nos serviços, mantendo como cultura dentro da
-                  empresa.
-                </p>
+
+                <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
+                  <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
+                    <img
+                      src="/sobre/valores.png"
+                      alt="Valores"
+                      className="w-16 h-16 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                    Valores
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Compromisso com clientes, respeito ao ser humano, ética e
+                    excelência nos serviços, mantendo como cultura dentro da
+                    empresa.
+                  </p>
+                </div>
               </div>
             </div>
 
