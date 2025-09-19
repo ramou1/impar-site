@@ -9,7 +9,7 @@ type BrandsCarouselProps = {
   images?: string[];
 };
 
-const DEFAULT_IMAGES = Array.from({ length: 8 }, (_, i) => `/brands/logo0${i + 1}.png`);
+const DEFAULT_IMAGES = Array.from({ length: 7 }, (_, i) => `/brands/logo0${i + 1}.png`);
 
 export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarouselProps) {
   const viewportRef = useRef<HTMLDivElement | null>(null);
