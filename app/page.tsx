@@ -14,6 +14,7 @@ import {
   MapPin,
 } from "lucide-react";
 import ObrasGrid from "../components/ObrasGrid";
+import ObrasDetalhadas from "../components/ObrasDetalhadas";
 import BrandsCarousel from "../components/BrandsCarousel";
 import AtuacoesCarousel from "../components/AtuacoesCarousel";
 import SobreCarousel from "../components/SobreCarousel";
@@ -118,6 +119,71 @@ export default function Home() {
       local: "Itapema - SC",
       capacidade: "409,25 TR",
       img: "/obras/obra-12.png",
+    },
+  ];
+
+  const obras_detalhadas = [
+    {
+      nome: "AEMFLO",
+      data: "2020",
+      local: "São José - SC",
+      descricao: "A instalação foi feita com sistemas VRV, incluindo várias unidades do tipo cassete, embutidas e high-wall, garantindo assim um ambiente discreto. As infraestruturas foram cuidadosamente projetadas e mantidas livres de adaptações que pudessem aumentar a perda de carga para todas as instalações.",
+      imagens: [
+        "/obras/destaque/obra-1.png",
+        "/obras/destaque/obra-2.png",
+        "/obras/destaque/obra-3.png",
+        "/obras/destaque/obra-4.png",
+        "/obras/destaque/obra-5.png",
+        "/obras/destaque/obra-6.png",
+      ],
+    },
+    {
+      nome: "PATIO MILANO",
+      data: "2020",
+      local: "Florianópolis - SC",
+      descricao: "A instalação foi concluída com sistemas de água gelada e diversas unidades, como fancoletes, cassetes, embutidas e fancoils. O projeto do espaço foi cuidadosamente planejado para integrar o ar condicionado de forma harmoniosa com a arquitetura.",
+      imagens: [
+        "/obras/destaque/obra-7.png",
+        "/obras/destaque/obra-8.png",
+        "/obras/destaque/obra-9.png",
+        "/obras/destaque/obra-10.png",
+        "/obras/destaque/obra-11.png",
+        "/obras/destaque/obra-12.png",
+        "/obras/destaque/obra-13.png",
+        "/obras/destaque/obra-14.png",
+        "/obras/destaque/obra-15.png",
+        "/obras/destaque/obra-16.png",
+      ],
+    },
+    {
+      nome: "AM MASTER HALL",
+      data: "2018 e expansão 2023",
+      local: "São José - SC",
+      descricao: "A instalação foi feita com sistemas do tipo direto, incluindo várias unidades do tipo splitão, com dutos de chapa de aço, elementos de difusão e dutos flexíveis, criando um ambiente com climatização homogênea para eventos.",
+      imagens: [
+        "/obras/destaque/obra-17.png",
+        "/obras/destaque/obra-18.png",
+        "/obras/destaque/obra-19.png",
+        "/obras/destaque/obra-20.png",
+        "/obras/destaque/obra-21.png",
+        "/obras/destaque/obra-22.png",
+      ],
+    },
+    {
+      nome: "PRÉDIOS PÚBLICOS TOMBADOS PELO PATRIMONIO HISTÓRICO",
+      data: "2021",
+      local: "Florianópolis - SC",
+      descricao: "A instalação foi realizada com sistemas VRF, utilizando dutos de chapa de PU para não adicionar peso extra à estrutura do telhado. Os difusores foram cuidadosamente projetados para proporcionar uma estética agradável aos usuários, garantindo uma circulação eficiente do ar climatizado no ambiente.",
+      imagens: [
+        "/obras/destaque/obra-23.png",
+        "/obras/destaque/obra-24.png",
+        "/obras/destaque/obra-25.png",
+        "/obras/destaque/obra-26.png",
+        "/obras/destaque/obra-27.png",
+        "/obras/destaque/obra-28.png",
+        "/obras/destaque/obra-29.png",
+        "/obras/destaque/obra-30.png",
+      ],
     },
   ];
 
@@ -523,6 +589,13 @@ export default function Home() {
             </div>
 
             <ObrasGrid items={principais_obras} />
+          </div>
+        </section>
+
+        {/* Obras Detalhadas */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <ObrasDetalhadas obras={obras_detalhadas} />
           </div>
         </section>
 
