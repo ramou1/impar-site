@@ -76,13 +76,13 @@ export default function ZoomableImage({
     lastPan.current = { x: clientX, y: clientY };
   };
 
-  const movePan = (clientX: number, clientY: number) => {
+  const movePan = useCallback((clientX: number, clientY: number) => {
     if (!isPanning || !lastPan.current) return;
     const dx = clientX - lastPan.current.x;
     const dy = clientY - lastPan.current.y;
     lastPan.current = { x: clientX, y: clientY };
     setTranslate((t) => ({ x: t.x + dx, y: t.y + dy }));
-  };
+  }, [isPanning]);
 
   const endPan = () => {
     setIsPanning(false);
