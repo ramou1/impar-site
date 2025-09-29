@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { ChevronLeft, ChevronRight, Calendar, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export type ObraDetalhada = {
   nome: string;
@@ -70,9 +71,11 @@ export default function ObrasDetalhadas({ obras }: ObrasDetalhadasProps) {
             {/* Galeria de imagens */}
             <div className="mb-4">
               <div className="relative">
-                <img
+                <Image
                   src={obra.imagens[imagensAtivas[obraIndex]]}
                   alt={`${obra.nome} - Imagem ${imagensAtivas[obraIndex] + 1}`}
+                  width={400}
+                  height={256}
                   className="w-full h-64 object-cover rounded-3xl"
                 />
                 

@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 type SobreItem = {
   img: string;
@@ -55,9 +56,11 @@ export default function SobreCarousel({ items }: SobreCarouselProps) {
             <div key={index} className="shrink-0 w-[90%] px-2">
               <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200 h-full">
                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.titulo}
+                    width={64}
+                    height={64}
                     className="w-16 h-16 object-contain"
                   />
                 </div>

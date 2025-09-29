@@ -1,9 +1,9 @@
 import Header from "../components/Header";
 import ZoomableImage from "../components/ZoomableImage";
+import Image from "next/image";
 import {
   Snowflake,
   Wind,
-  Wrench,
   Building,
   Shield,
   Award,
@@ -348,9 +348,11 @@ export default function Home() {
               {/* Imagem - Lado Direito */}
               <div className="relative order-1 lg:order-2">
                 <div className="relative w-full h-48 md:h-56 lg:h-[450px] rounded-2xl overflow-hidden shadow-2xl">
-                  <img
+                  <Image
                     src="/banner-hero.jpg"
                     alt="Impar Climatização e Sistemas"
+                    width={800}
+                    height={450}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/20 to-transparent"></div>
@@ -396,9 +398,11 @@ export default function Home() {
               <div className="hidden md:grid md:grid-cols-3 gap-8">
                 <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                   <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                    <img
+                    <Image
                       src="/sobre/visao.png"
                       alt="Visão"
+                      width={64}
+                      height={64}
                       className="w-16 h-16 object-contain"
                     />
                   </div>
@@ -412,9 +416,11 @@ export default function Home() {
 
                 <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                   <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                    <img
+                    <Image
                       src="/sobre/missao.png"
                       alt="Missão"
+                      width={64}
+                      height={64}
                       className="w-16 h-16 object-contain"
                     />
                   </div>
@@ -430,9 +436,11 @@ export default function Home() {
 
                 <div className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200">
                   <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center hover:scale-110 transition-transform">
-                    <img
+                    <Image
                       src="/sobre/valores.png"
                       alt="Valores"
+                      width={64}
+                      height={64}
                       className="w-16 h-16 object-contain"
                     />
                   </div>
@@ -627,9 +635,11 @@ export default function Home() {
                     className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group"
                   >
                     <div className="w-48 h-48 mb-4 rounded-lg overflow-hidden mx-auto">
-                      <img
+                      <Image
                         src={atuacao.img}
                         alt={atuacao.titulo}
+                        width={192}
+                        height={192}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -734,7 +744,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="text-center">
               <div className="flex items-center justify-center mb-6">
-                <img src="/logo-dark.png" alt="Impar" className="h-10 w-auto" />
+                <Image src="/logo-dark.png" alt="Impar" width={120} height={40} className="h-10 w-auto" />
               </div>
               <p className="text-sm text-gray-500 mb-4">
                 Prestação de serviços ligados na área de refrigeração,

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";
+import Image from "next/image";
 
 export type Obra = {
   nome: string;
@@ -21,9 +22,11 @@ export default function ObrasGrid({ items }: ObrasGridProps) {
   const Card = ({ obra }: { obra: Obra }) => (
     <div className="bg-white p-6 rounded-xl hover:shadow-lg transition-all duration-300 border border-gray-200">
       <div className="flex items-start justify-between mb-4">
-        <img
+        <Image
           src={obra.img}
           alt={obra.nome}
+          width={128}
+          height={64}
           className="w-32 h-16 object-cover rounded-lg flex-shrink-0"
         />
         <span className="text-2xl font-bold text-brand-red ml-2">

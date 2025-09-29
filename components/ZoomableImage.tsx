@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 type ZoomableImageProps = {
   src: string;
@@ -169,7 +170,7 @@ export default function ZoomableImage({
       el.removeEventListener("touchend", handleTouchEnd as EventListener);
       el.removeEventListener("touchcancel", handleTouchEnd as EventListener);
     };
-  }, [scale, translate, isPanning]);
+  }, [scale, translate, isPanning, movePan]);
 
   const doubleTapTimeout = useRef<number | null>(null);
   const onDoubleTap = () => {
@@ -178,7 +179,7 @@ export default function ZoomableImage({
     setTranslate({ x: 0, y: 0 });
   };
 
-  const onTouchTap = (e: React.TouchEvent) => {
+  const onTouchTap = () => {
     if (doubleTapTimeout.current) {
       window.clearTimeout(doubleTapTimeout.current);
       doubleTapTimeout.current = null;
@@ -205,7 +206,7 @@ export default function ZoomableImage({
         onClick={open}
         className={`relative group w-full ${thumbnailClassName ?? ""}`}
       >
-        <img src={src} alt={alt} className={className} />
+        <Image src={src} alt={alt} width={800} height={600} className={className} />
         <span className="absolute inset-0 rounded-lg ring-1 ring-inset ring-white/20 group-active:scale-[0.99] transition-transform" />
       </button>
 
@@ -269,10 +270,12 @@ export default function ZoomableImage({
                 transform: `translate3d(${translate.x}px, ${translate.y}px, 0)`,
               }}
             >
-              <img
+              <Image
                 ref={imgRef}
                 src={src}
                 alt={alt}
+                width={1200}
+                height={800}
                 className="max-w-none will-change-transform"
                 style={{ transform: `scale(${scale})`, width: "100%", height: "auto" }}
                 draggable={false}

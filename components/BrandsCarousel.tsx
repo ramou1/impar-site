@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useMemo, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaOptionsType } from "embla-carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Image from "next/image";
 
 type BrandsCarouselProps = {
   images?: string[];
@@ -36,8 +37,6 @@ export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarous
     emblaApi.on("select", () => autoplay.play());
   }, [emblaApi, autoplay]);
 
-  const onMouseEnter = useCallback(() => autoplay.stop(), [autoplay]);
-  const onMouseLeave = useCallback(() => autoplay.play(), [autoplay]);
 
   return (
     <div className="relative">
@@ -45,9 +44,11 @@ export default function BrandsCarousel({ images = DEFAULT_IMAGES }: BrandsCarous
         <div className="flex">
           {images.concat(images).map((src, idx) => (
             <div key={idx} className="shrink-0 px-4">
-              <img
+              <Image
                 src={src}
                 alt={`Logo ${idx % images.length + 1}`}
+                width={64}
+                height={64}
                 className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
